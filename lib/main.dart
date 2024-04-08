@@ -1,4 +1,3 @@
-//main.dart
 import 'package:flutter/material.dart';
 import 'nfc_manager.dart';
 
@@ -51,7 +50,7 @@ class NFCServicePage extends StatelessWidget {
 
   void startNFCService(BuildContext context) {
     try {
-      NFCManager.startNFCService("Your NDEF Message");
+      MyNfcPlugin.startNFCService("Your NDEF Message");
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text('NFC service started'),
       ));
@@ -65,7 +64,7 @@ class NFCServicePage extends StatelessWidget {
 
   void stopNFCService(BuildContext context) {
     try {
-      NFCManager.stopNFCService();
+      MyNfcPlugin.stopNFCService();
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text('NFC service stopped'),
       ));
